@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Document </title>
+</head>
+
+<body>
+	<div style="color:blue">
+		<form action="{{ url_for('predict')}}" method="post">
+			<h2> Predicting Phone Price </h2>
+			<h3>RAM in GB</h3>
+			<select id="first" name="ram">
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+			<option value="8">8</option>
+			<option value="12">12</option>
+			</select>
+
+			<h3>Display in Inches</h3>
+			<select id="first" name="display">
+			<option value="5.5">5.5</option>
+			<option value="6.0">6.0</option>
+			<option value="6.5">6.5</option>
+			<option value="6.8">6.8</option>
+			</select>
+
+			<h3>Battery in mAh</h3>
+			<select id="first" name="battery">
+			<option value="4000">4000</option>
+			<option value="5000">5000</option>
+			<option value="6000">6000</option>
+			<option value="7000">7000</option>
+			</select>
+
+			<br><br><button id="sub" type="submit ">Calculate the Phone Price</button>
+            <br>
+
+        </form>
+
+        <br><h3>{{ prediction_texts }}</h3>
